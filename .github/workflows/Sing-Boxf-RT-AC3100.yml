@@ -24,7 +24,7 @@ jobs:
           # GOARM=5 確保使用最安全的軟浮點相容模式，終結所有不相容報錯
           env CGO_ENABLED=0 GOOS=linux GOARCH=arm GOARM=5 go build \
             -v \
-            -tags "with_gvisor with_dhcp with_dns with_tun" \
+            -tags "with_gvisor with_dhcp with_dns with_tun with_utls" \
             -ldflags "-s -w" \
             -o sing-box \
             ./cmd/sing-box
