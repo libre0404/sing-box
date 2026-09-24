@@ -20,7 +20,7 @@ jobs:
 
       - name: Compile tailored sing-box
         run: |
-          env GOOS=linux GOARCH=arm GOARM=7 go build \
+          env GOOS=linux GOARCH=arm GOARM=5 go build \
             -v \
             -tags "with_gvisor with_dhcp with_dns with_tun with_wireguard with_ech" \
             -ldflags "-s -w" \
